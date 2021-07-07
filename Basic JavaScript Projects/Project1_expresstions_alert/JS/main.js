@@ -15,3 +15,6 @@ document.write(Daughter);
 var Son = Son.fontcolor("Orange"); // makes the "Son" text orange
 document.write(Son);
 document.write(5+5); 
+C = " Hello";
+D = " World!";
+document.write(C + D)
