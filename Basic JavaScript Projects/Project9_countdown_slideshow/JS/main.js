@@ -1,0 +1,40 @@
+function countdown() { //This function will start a countdown from the user input number
+    var seconds = document.getElementById("seconds").value;
+
+    function tick() {
+        seconds = seconds - 1; 
+        timer.innerHTML = seconds;
+        setTimeout(tick, 1000);
+    if(seconds == -1) {
+        alert("Time is up!");
+    }
+    }
+    tick();
+}
+
+var slideIndex = 1;
+showSlides(slideIndex);
+
+function plusSlides(n) { //Controls next and prev
+    showSlides(slideIndex += n);
+}
+
+function currentSlide(n) { //img controls
+    showSlides(slideIndex = n);
+}
+
+function showSlides(n) {
+    var i;
+    var slides = document.getElementsByClassName("mySlides");
+    var dots = document.getElementsByClassName("dot");
+    if (n > slides.length) {slideIndex = 1}
+    if (n < 1) {slideIndex = slides.length}
+    for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";
+    }
+    for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+    }
+    slides[slideIndex-1].style.display = "block";
+    dots[slideIndex-1].className += " active";
+}
