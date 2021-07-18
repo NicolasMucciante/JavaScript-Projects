@@ -97,7 +97,7 @@ function drawWinLine(coordX1, coordY1, coordX2, coordY2) { //This will draw the 
         c.stroke();
         if (x1 <= x2 && y1 <= y2) { //This checks if we've reached the endpoint
             if(x < x2) { x +=10; } //These next 2 lines add 10 to the end point
-            if(y >= y2) { y += 10; }
+            if(y < y2) { y += 10; }
             if(x >= x2 && y >= y2) {cancelAnimationFrame(animationLoop); } //This ends the animation if we reach the end points
         }
         if (x1 <= x2 && y1 >= y2) { //This is for the 6 4 2 win condition
