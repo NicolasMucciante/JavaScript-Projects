@@ -27,7 +27,9 @@
                 $("#1").on( "click", function() { //This writes in the cosole when p1 is clicked
                     console.log(" clack ");
                 })
-                $("#2").slideUp(500); //This makes p2 slide up and disappear over half a second
+                $("#2").click(function() { //This makes p2 slide up and disappear on a click over half a second
+                    $('#2').slideUp(500);
+                }) 
             });
         </script>
 
